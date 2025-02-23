@@ -1,0 +1,35 @@
+.about {
+  font-family: 'Handjet', sans-serif;
+  font-weight: 300; /* Light 300 */
+  padding-left: 110px;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+}
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}

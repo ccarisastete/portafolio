@@ -1,0 +1,68 @@
+.skills {
+  font-family: 'Handjet', sans-serif;
+  font-weight: 300;
+  padding-left: 110px;
+  color: #ffffff;
+}
+
+.skills-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-pill {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.skill-pill.software {
+  border-color: #454749;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.skill-pill.software:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.skill-pill.programming {
+  border-color: #353637;
+}
+
+.skill-pill.language {
+  border-color: #252627;
+}
+
+@media (max-width: 768px) {
+  .skill-pills {
+    gap: 0.8rem;
+  }
+
+  .skill-pill {
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
