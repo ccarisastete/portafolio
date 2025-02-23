@@ -57,6 +57,10 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .skills {
+    padding-left: 1rem;
+    padding-right: 1rems;
+  }
   .skill-pills {
     gap: 0.8rem;
   }

@@ -12,6 +12,7 @@
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .about-text {
@@ -29,6 +30,11 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .about-content {
     flex-direction: column;
   }

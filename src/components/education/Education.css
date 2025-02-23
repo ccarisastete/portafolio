@@ -102,6 +102,11 @@
 }
 
 @media (max-width: 768px) {
+  .education {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .education-cards {
     grid-template-columns: 1fr;
   }

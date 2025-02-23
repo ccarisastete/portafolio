@@ -76,6 +76,11 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;

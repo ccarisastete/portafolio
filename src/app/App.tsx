@@ -8,41 +8,43 @@ import Contact from '../components/contact/Contact';
 import PageTransition from '../components/transitions/PageTransition';
 function App() {
   return (
-    <div>
+    <div className='app-container'>
       <Navbar />
-      <PageTransition>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <Navigate
-                to='/about'
-                replace
-              />
-            }
-          />
-          <Route
-            path='/about'
-            element={<About />}
-          />
-          <Route
-            path='/experiencie'
-            element={<Experience />}
-          />
-          <Route
-            path='/education'
-            element={<Education />}
-          />
-          <Route
-            path='/skills'
-            element={<Skills />}
-          />
-          <Route
-            path='/contact'
-            element={<Contact />}
-          />
-        </Routes>
-      </PageTransition>
+      <div className='content-wrapper'>
+        <PageTransition>
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <Navigate
+                  to='/about'
+                  replace
+                />
+              }
+            />
+            <Route
+              path='/about'
+              element={<About />}
+            />
+            <Route
+              path='/experiencie'
+              element={<Experience />}
+            />
+            <Route
+              path='/education'
+              element={<Education />}
+            />
+            <Route
+              path='/skills'
+              element={<Skills />}
+            />
+            <Route
+              path='/contact'
+              element={<Contact />}
+            />
+          </Routes>
+        </PageTransition>
+      </div>
     </div>
   );
 }

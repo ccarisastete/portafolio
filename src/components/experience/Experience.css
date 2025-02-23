@@ -102,6 +102,10 @@
 }
 
 @media (max-width: 768px) {
+  .experience {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .experience-cards {
     grid-template-columns: 1fr;
   }

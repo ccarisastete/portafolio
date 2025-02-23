@@ -1,6 +1,6 @@
 .navbar {
   font-family: 'Handjet', sans-serif;
-  font-weight: 300; /* Light 300 */
+  font-weight: 300;
   font-size: 20px;
   width: 100px;
   height: 100vh;
@@ -14,19 +14,96 @@
   padding-top: 20px;
   gap: 20px;
   color: #ffffff;
-  z-index: 10;
-  pointer-events: auto;
+  z-index: 1000;
+  background-color: transparent;
 }
 
-.navbar a {
-  pointer-events: auto;
-  color: #ffffff;
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
   text-decoration: none;
-  cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   transform: scale(1.1);
   color: #a8a8a8;
+}
+
+.nav-links a.active {
+  color: #808080;
+}
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    padding: 1rem 2rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem;
+    border-right: none;
+    position: fixed;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(5, 7, 9, 0.9);
+    padding-top: 150px; /* Added more top padding for mobile */
+    transition: right 0.3s ease-in-out;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    backdrop-filter: blur(5px);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-line.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
